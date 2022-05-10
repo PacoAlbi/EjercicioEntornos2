@@ -65,6 +65,17 @@ class ProductoTest {
     }
 
     @Test
+    void setPrecioCN3() {
+        boolean saltaExcepcion = false;
+        try {
+            producto = new Producto("Café", -15.60);
+        } catch (Exception e){
+            saltaExcepcion = true;
+        }
+        assertTrue(saltaExcepcion, "La excepción no ha saltado como debería.");
+    }
+
+    @Test
     void constructorCB() {
         boolean saltaExcepcion = false;
         try {
