@@ -32,13 +32,38 @@ class VectorTest {
     }
 
     @Test
-    void obtenerMaximo() {
-
-
+    void obtenerMaximoCN1() throws Exception {
+        assertEquals(55.14, vector.obtenerMaximo(), "Máximo no encontrado.");
     }
 
     @Test
-    void contieneValor() {
-        double valor =
+    void obtenerMaximoCN2() throws Exception {
+        assertNotEquals(70.0, vector.obtenerMaximo(), "Máximo encontrado.");
+    }
+
+    @Test
+    void obtenerMaximoCN3() {
+        boolean salta = false;
+        try {
+            vectorNulo.obtenerMaximo();
+        } catch (Exception e) {
+            salta = true;
+        }
+        assertTrue(salta,"La excepción no ha saltado como debiera.");
+    }
+
+    @Test
+    void contieneValorCN1() {
+        assertTrue(vector.contieneValor(0.0), "No se ha encontrado el valor.");
+    }
+
+    @Test
+    void contieneValorCN2() {
+        assertFalse(vector.contieneValor(8.0), "Se ha encontrado el valor.");
+    }
+
+    @Test
+    void contieneValorCN3() {
+        assertFalse(vectorNulo.contieneValor(0.0), "Se ha encontrado el valor.");
     }
 }
