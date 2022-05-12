@@ -12,13 +12,13 @@ class VectorTest {
     @Test
     void VectorCN1() {
         double[] datos = new double[]{1.0, 15.6, -60.78, 0.0, 55.14, -2.0};
-        assertArrayEquals(new Vector(datos).vector, datos, "Error del constructor.");
+        assertArrayEquals(new Vector(datos).vector, datos, "(0010)Error del constructor.");
     }
 
     @Test
     void VectorCN2() {
         double[] datos = new double[]{};
-        assertArrayEquals(new Vector(datos).vector, datos, "Error del constructor.");
+        assertArrayEquals(new Vector(datos).vector, datos, "(0020)Error del constructor.");
     }
 
     @Test
@@ -29,14 +29,14 @@ class VectorTest {
         } catch (Exception e) {
             salta = true;
         }
-        assertTrue(salta, "Error al saltar la excepción.");
+        assertTrue(salta, "(0030)Error al saltar la excepción.");
     }
 
     @Test
     void duplicarValoresCN1() {
         Vector vacio = new Vector(new double[0]);
         vacio.duplicarValores();
-        assertArrayEquals(vacio.vector, vectorNulo.vector, "No se han duplicado correctamente.");
+        assertArrayEquals(vacio.vector, vectorNulo.vector, "(0040)No se han duplicado correctamente.");
     }
 
     @Test
