@@ -8,7 +8,6 @@ public class Vector {
         this.vector = vector.clone();
     }
 
-
     public void duplicarValores() {
         for (int i = 0; i < vector.length; i++) {
             vector[i] *= 2;
