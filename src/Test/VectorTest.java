@@ -59,7 +59,7 @@ class VectorTest {
         assertEquals(55.14, vector.obtenerMaximo(), "Máximo no encontrado.");
     }
 
-    @Test
+    @Test //Esta prueba no tiene sentido porque no es algo que el método pruebe.
     void obtenerMaximoCN2() throws Exception {
         assertNotEquals(70.0, vector.obtenerMaximo(), "Máximo encontrado.");
     }
